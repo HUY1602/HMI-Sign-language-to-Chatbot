@@ -104,24 +104,6 @@ http://127.0.0.1:5000
 
 Giao diện gửi tin nhắn tới endpoint `POST /chat`; backend chuyển nội dung tới Gemini và trả phản hồi cho trình duyệt.
 
-## Cấu hình API key
-
-Backend cần API key Gemini hợp lệ. Không đưa API key vào README, không commit key lên GitHub và không chia sẻ key công khai.
-
-Hiện tại, `chatbot/app.py` đang khai báo API key trực tiếp trong mã nguồn. Trước khi sử dụng hoặc chia sẻ dự án, hãy thu hồi/đổi key nếu key đã bị công khai và sửa ứng dụng để đọc key từ biến môi trường hoặc một tệp cấu hình không được commit.
-
-Ví dụ đặt biến môi trường:
-
-```bash
-# macOS / Linux
-export GEMINI_API_KEY="your_api_key"
-
-# Windows PowerShell
-$env:GEMINI_API_KEY="your_api_key"
-```
-
-> Chỉ đặt biến môi trường là chưa đủ với phiên bản hiện tại: cần sửa `chatbot/app.py` để ứng dụng đọc `GEMINI_API_KEY` thay vì dùng key viết trực tiếp trong mã nguồn.
-
 ## Lưu ý
 
 - Cần cấp quyền truy cập webcam cho ứng dụng.
